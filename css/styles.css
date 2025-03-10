@@ -1,0 +1,265 @@
+/* ========================================================
+   Autor: Renata . Tonon
+   Contato: @retononcode
+   Descrição: #sisnote Sistema de notas e Compromissos
+   ======================================================== */
+
+/* =================== BASE =================== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0f29;
+    color: #00bfff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 50px; /* Ajuste conforme a altura real do footer */
+}
+
+/* =================== CONTAINERS =================== */
+.wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background: #1a1f4e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00bfff;
+}
+
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* =================== EVENTOS =================== */
+.event-card {
+    width: 48%;
+    border: 1px solid #00bfff;
+    padding: 15px;
+    margin: 10px 0;
+    background: #1a1f4e;
+    color: #00bfff;
+    border-radius: 5px;
+    text-align: left;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.event-delete {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* =================== BOTÕES =================== */
+.btn {
+    background: #00bfff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0080ff;
+}
+
+ }
+ .btn {
+            padding: 5px 10px;
+            background-color: red;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+}
+        .btn:hover {
+            background-color: darkred;
+}
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background: #00bfff;
+            color: #0a0f29;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background: #0080ff;
+        }
+        .note-icon {
+            color: #ffcc00;
+            font-size: 24px;
+        }
+
+/* =================== TABELAS =================== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: #1a1f4e;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #00bfff;
+            text-align: left;
+        }
+        th {
+            background-color: #0080ff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #131a3a;
+        }
+        a {
+            color: #00bfff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+       
+/* =================== NOTAS =================== */
+
+
+  .note {
+            border: 1px solid #00bfff;
+            padding: 10px;
+            margin: 10px 0;
+            background: #1a1f4e;
+            color: #00bfff;
+            border-radius: 5px;
+            position: relative;
+        }
+        .delete { color: red; cursor: pointer; position: absolute; top: 5px; right: 10px; }
+        .upload-btn { margin-top: 5px; }
+        }
+            .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background: #00bfff;
+            color: #0a0f29;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+#notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.note {
+    width: 250px;
+    min-height: 150px;
+    background: #ffeb3b;
+    color: #000;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transform: rotate(-3deg);
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.note:nth-child(even) {
+    transform: rotate(3deg);
+}
+
+.note textarea {
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    border: none;
+    color: #000;
+    resize: none;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.note textarea:focus {
+    outline: none;
+}
+
+.delete {
+    color: red;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-weight: bold;
+}
+
+.upload-btn {
+    margin-top: 5px;
+}
+
+.button, #new-note {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background: #00bfff;
+    color: #0a0f29;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button, #new-note:hover {
+    background: #0080ff;
+}
+
+@media (max-width: 600px) {
+    #notes {
+        flex-direction: column;
+        align-items: center;
+    }
+    .note {
+        width: 90%;
+    }
+}
+   
+/* =================== RODAPÉ =================== */
+.footer-container {
+    z-index: 99999 !important; /* Aumentando prioridade */
+}
+
+.footer-container {
+    width: 100%;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999; /* Maior prioridade na pilha de camadas */
+}
+
+    .footer-container a {
+        color: #00bfff; /* Azul claro */
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .footer-container a:hover {
+        text-decoration: underline;
+    }
+
