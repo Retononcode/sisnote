@@ -101,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="password" name="password" placeholder="Senha" required><br>
         <button type="submit">Entrar</button>
     </form>
-    <p>Não tem conta? <a href="register.php">Cadastre-se</a></p>    </div>
+    <p>Não tem conta? <a href="cadastro.php">Cadastre-se</a></p>    </div>
   
   
     <!-- Rodapé -->
