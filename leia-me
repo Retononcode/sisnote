@@ -1,1 +1,104 @@
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação do SisNote v1</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; padding: 20px; background-color: #f4f4f4; }
+        h1, h2 { color: #333; }
+        pre { background: #eee; padding: 10px; border-radius: 5px; }
+        code { font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>Documentação do SisNote v1</h1>
+    
+    <h2>Introdução</h2>
+    <p>O <strong>SisNote v1</strong> é um sistema de gerenciamento de notas e compromissos, permitindo que usuários armazenem e organizem suas anotações e compromissos de maneira eficiente.</p>
+    
+    <h2>Requisitos do Sistema</h2>
+    <ul>
+        <li>Servidor web (Apache ou Nginx)</li>
+        <li>PHP 7.4 ou superior</li>
+        <li>MySQL 5.7 ou superior</li>
+        <li>Composer (para gerenciamento de dependências, se necessário)</li>
+    </ul>
+    
+    <h2>Estrutura do Projeto</h2>
+    <pre>
+/sisnote-v1/
+│── admin/                   # Módulo administrativo
+│── css/                     # Estilos CSS do sistema
+│── includes/                # Arquivos incluídos em várias páginas
+│── uploads/                 # Diretório de uploads e backups do banco de dados
+│── db.php                   # Configuração da conexão com o banco de dados
+│── index.php                # Página inicial
+│── login.php                # Página de login
+│── cadastro.php             # Página de cadastro
+│── notas.php                # Gerenciamento de notas
+│── compromissos.php         # Gerenciamento de compromissos
+│── painel.php               # Painel de controle
+│── logout.php               # Logout do sistema
+│── save_event.php           # Salva compromissos no banco
+│── fetch_events.php         # Busca eventos para exibição no calendário
+    </pre>
+    
+    <h2>Configuração do Banco de Dados</h2>
+    <h3>1. Criação do Banco</h3>
+    <pre><code>CREATE DATABASE sisnote;</code></pre>
+    
+    <h3>2. Importação da Estrutura</h3>
+    <p>No diretório <code>uploads/</code>, há backups do banco de dados em formato <code>.sql</code>. Para importar:</p>
+    <pre><code>mysql -u seu_usuario -p sisnote < sisnote.sql</code></pre>
+    
+    <h3>3. Configuração do Arquivo <code>db.php</code></h3>
+    <pre><code>&lt;?php
+$host = 'localhost';
+$usuario = 'root'; // Alterar conforme necessário
+$senha = ''; // Alterar conforme necessário
+$banco = 'sisnote';
+
+$conn = new mysqli($host, $usuario, $senha, $banco);
+
+if ($conn->connect_error) {
+    die('Erro de conexão: ' . $conn->connect_error);
+}
+?></code></pre>
+    
+    <h2>Instalação e Configuração</h2>
+    <ol>
+        <li>Suba os arquivos do projeto para o diretório do servidor.</li>
+        <li>Configure o banco de dados conforme as instruções acima.</li>
+        <li>Acesse o sistema pelo navegador: <code>http://seu-servidor/sisnote-v1</code></li>
+        <li>Crie um usuário para login e acesso ao sistema.</li>
+    </ol>
+    
+    <h2>Módulo Administrativo</h2>
+    <p>O sistema possui um painel administrativo acessível via:</p>
+    <ul>
+        <li><code>http://seu-servidor/sisnote-v1/admin/admin.php</code></li>
+        <li>O login padrão do administrador deve ser criado no banco de dados manualmente.</li>
+          <li> Login é admin@email.com a senha é teste@teste.com</li>
+    </ul>
+    
+    <h2>Funcionalidades Principais</h2>
+    <ul>
+        <li>Cadastro e login de usuários</li>
+        <li>Gerenciamento de notas (criação, edição e exclusão)</li>
+        <li>Calendário de compromissos</li>
+        <li>Painel administrativo para gerenciar usuários</li>
+    </ul>
+    
+    <h2>Segurança</h2>
+    <ul>
+        <li>Para aumentar a segurança, recomenda-se alterar as credenciais do banco de dados.</li>
+        <li>Proteger o diretório <code>admin/</code> com autenticação adicional.</li>
+    </ul>
+    
+    <h2>Conclusão</h2>
+    <p>O <strong>SisNote v1</strong> é um sistema simples e eficiente para gerenciar notas e compromissos. Caso precise de customizações, basta editar os arquivos PHP e CSS conforme necessário.</p>
+<p>Caso encontre algum problema avise-nos retononcode@gmail.com</p>
+</body>
+</html>
