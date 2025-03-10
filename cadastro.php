@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             text-align: center;
         }
         .container {
-            width: 300px;
+            width: 90%;
             margin: 50px auto;
             padding: 20px;
             background: #1a1f4e;
